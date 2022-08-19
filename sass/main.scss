@@ -390,6 +390,7 @@ textarea::placeholder {
   animation: scroll 40s linear infinite;
   @media (max-width: media(mobile)) {
     width: calc(250px * 10);
+    animation: scrollMobile 40s linear infinite;
   }
 }
 
@@ -400,10 +401,14 @@ textarea::placeholder {
   100% {
     transform: translateX(calc(-500px * 5));
   }
-  @media (max-width: media(mobile)) {
-    100% {
-      transform: translateX(calc(-250px * 5));
-    }
+}
+
+@keyframes scrollMobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 5));
   }
 }
 

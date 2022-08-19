@@ -431,6 +431,8 @@ textarea::placeholder {
 @media (max-width: 480px) {
   .slider-container {
     width: 2500px;
+    -webkit-animation: scrollMobile 40s linear infinite;
+            animation: scrollMobile 40s linear infinite;
   }
 }
 
@@ -441,11 +443,6 @@ textarea::placeholder {
   100% {
     transform: translateX(-2500px);
   }
-  @media (max-width: 480px) {
-    100% {
-      transform: translateX(-1250px);
-    }
-  }
 }
 
 @keyframes scroll {
@@ -455,10 +452,21 @@ textarea::placeholder {
   100% {
     transform: translateX(-2500px);
   }
-  @media (max-width: 480px) {
-    100% {
-      transform: translateX(-1250px);
-    }
+}
+@-webkit-keyframes scrollMobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1250px);
+  }
+}
+@keyframes scrollMobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1250px);
   }
 }
 .slide {
