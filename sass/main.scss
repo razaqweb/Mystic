@@ -86,10 +86,10 @@
     letter-spacing: -1.6px;
     line-height: 1.25;
     @media (max-width: media(laptop)) {
-      font-size: 6.4rem;
+      font-size: 5rem;
     }
     @media (max-width: media(mobile)) {
-      font-size: 4rem;
+      font-size: 3.4rem;
       margin-bottom: 1.2rem;
     }
   }
@@ -100,23 +100,23 @@
     line-height: 1.5;
     margin-bottom: 4.4rem;
     width: 50%;
+    @media (max-width: media(laptop)) {
+      font-size: 3rem;
+    }
     @media (max-width: media(mobile)) {
       font-size: 2rem;
       margin: 0 auto;
-      width: 80%;
-    }
-    @media (max-width: media(laptop)) {
-      font-size: 3rem;
+      width: 100%;
     }
   }
 
   .flex-fill {
     width: 100%;
-    @media (max-width: media(mobile)) {
-      display: none;
-    }
     @media (max-width: media(laptop)) {
       width: 50%;
+    }
+    @media (max-width: media(mobile)) {
+      display: none;
     }
   }
 }
@@ -141,9 +141,9 @@
     font-weight: weight(bold);
     cursor: pointer;
     @media (max-width: media(mobile)) {
-      height: 30px;
+      height: 40px;
       width: 95px;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -163,14 +163,13 @@
     margin: 0 auto;
     font-weight: 400;
     font-size: 3.2rem;
-    @media (max-width: media(mobile)) {
-      font-size: 1.2rem;
-      max-width: 70%;
-    }
-
     @media (max-width: media(laptop)) {
       font-size: 2.4rem;
       font-weight: 400;
+    }
+    @media (max-width: media(mobile)) {
+      font-size: 1.2rem;
+      max-width: 70%;
     }
   }
 }
@@ -180,11 +179,11 @@
   font-size: 6.4rem;
   margin-bottom: 4.4rem;
   font-weight: weight(black);
-  @media (max-width: media(mobile)) {
-    font-size: 3.2rem;
-  }
   @media (max-width: media(laptop)) {
     font-size: 4rem;
+  }
+  @media (max-width: media(mobile)) {
+    font-size: 3.2rem;
   }
 }
 
@@ -245,21 +244,21 @@
 
 .prev {
   left: 30rem;
-  @media (max-width: media(mobile)) {
-    left: 3rem;
-  }
   @media (max-width: media(laptop)) {
     left: 15%;
+  }
+  @media (max-width: media(mobile)) {
+    left: 3rem;
   }
 }
 
 .next {
   right: 30rem;
-  @media (max-width: media(mobile)) {
-    right: 3rem;
-  }
   @media (max-width: media(laptop)) {
     right: 15%;
+  }
+  @media (max-width: media(mobile)) {
+    right: 3rem;
   }
 }
 
@@ -281,6 +280,9 @@
 
 .booking-flex-2 {
   width: 50%;
+  @media (max-width: media(mobile)) {
+    width: 100%;
+  }
 }
 
 .booking-form {
@@ -294,12 +296,12 @@
   margin: 0 auto;
   font-weight: 400;
   font-size: 3.2rem;
+  @media (max-width: media(laptop)) {
+    font-size: 2.4rem;
+  }
   @media (max-width: media(mobile)) {
     font-size: 1.2rem;
     max-width: 70%;
-  }
-  @media (max-width: media(laptop)) {
-    font-size: 2.4rem;
   }
 }
 
@@ -312,13 +314,13 @@ input {
   outline: none;
   border-bottom: 3px solid $accent-color;
   font-weight: 600;
+  @media (max-width: media(laptop)) {
+    font-size: 2.4rem;
+  }
   @media (max-width: media(mobile)) {
     font-size: 1.5rem;
     border-bottom: 1.5px solid $accent-color;
     outline: none;
-  }
-  @media (max-width: media(laptop)) {
-    font-size: 2.4rem;
   }
 }
 
@@ -332,11 +334,11 @@ textarea {
   padding: 2%;
   font-weight: 400;
   resize: none;
-  @media (max-width: media(mobile)) {
-    font-size: 1.5rem;
-  }
   @media (max-width: media(laptop)) {
     font-size: 2.4rem;
+  }
+  @media (max-width: media(mobile)) {
+    font-size: 1.5rem;
   }
 }
 
@@ -365,8 +367,8 @@ textarea::placeholder {
   font-weight: weight(bold);
   cursor: pointer;
   @media (max-width: media(mobile)) {
-    font-size: 2rem;
-    height: 40px;
+    font-size: 1.6rem;
+    height: 50px;
   }
 }
 
@@ -377,12 +379,18 @@ textarea::placeholder {
   width: 90%;
   margin: auto;
   overflow: hidden;
+  @media (max-width: media(mobile)) {
+    height: 250px;
+  }
 }
 
 .slider-container {
   width: calc(500px * 10);
   display: flex;
   animation: scroll 40s linear infinite;
+  @media (max-width: media(mobile)) {
+    width: calc(250px * 10);
+  }
 }
 
 @keyframes scroll {
@@ -392,6 +400,11 @@ textarea::placeholder {
   100% {
     transform: translateX(calc(-500px * 5));
   }
+  @media (max-width: media(mobile)) {
+    100% {
+      transform: translateX(calc(-250px * 5));
+    }
+  }
 }
 
 .slide {
@@ -399,6 +412,10 @@ textarea::placeholder {
   width: 500px;
   display: flex;
   align-items: center;
+  @media (max-width: media(mobile)) {
+    height: 250px;
+    width: 250px;
+  }
 }
 
 .slide-img {
