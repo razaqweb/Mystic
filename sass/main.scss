@@ -193,55 +193,55 @@
   position: relative;
 }
 
-.carousel {
-  width: 60%;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
+// .carousel {
+//   width: 60%;
+//   margin: 0 auto;
+//   position: relative;
+//   overflow: hidden;
+// }
 
-.carousel-button {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 5rem;
-  width: 5rem;
-  background: none;
-  border: none;
-  border-radius: 100px;
-  &:hover {
-    color: $accent-color;
-  }
-  @media (max-width: media(mobile)) {
-    height: 3rem;
-    width: 3rem;
-  }
-}
+// .carousel-button {
+//   cursor: pointer;
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   height: 5rem;
+//   width: 5rem;
+//   background: none;
+//   border: none;
+//   border-radius: 100px;
+//   &:hover {
+//     color: $accent-color;
+//   }
+//   @media (max-width: media(mobile)) {
+//     height: 3rem;
+//     width: 3rem;
+//   }
+// }
 
-.slider-container {
-  display: flex;
+// .slider-container {
+//   display: flex;
 
-  width: 700%;
-  @media (max-width: media(mobile)) {
-    width: 750%;
-  }
-}
+//   width: 700%;
+//   @media (max-width: media(mobile)) {
+//     width: 750%;
+//   }
+// }
 
-.slide {
-  width: 100%;
-  cursor: pointer;
-}
+// .slide {
+//   width: 100%;
+//   cursor: pointer;
+// }
 
-.slide-img {
-  height: 100%;
-  width: 100%;
-  filter: grayscale(100);
-  transition: 1s ease-in-out;
-  &:hover {
-    filter: grayscale(0);
-  }
-}
+// .slide-img {
+//   height: 100%;
+//   width: 100%;
+//   filter: grayscale(100);
+//   transition: 1s ease-in-out;
+//   &:hover {
+//     filter: grayscale(0);
+//   }
+// }
 
 .prev {
   left: 30rem;
@@ -367,5 +367,45 @@ textarea::placeholder {
   @media (max-width: media(mobile)) {
     font-size: 2rem;
     height: 40px;
+  }
+}
+
+.carousel {
+  height: 500px;
+  place-items: center;
+  display: grid;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-container {
+  width: calc(500px * 10);
+  display: flex;
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-500px * 5));
+  }
+}
+
+.slide {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.slide-img {
+  width: 100%;
+  filter: grayscale(100);
+  transition: 0.5s ease-in-out;
+  &:hover {
+    filter: grayscale(0);
   }
 }
