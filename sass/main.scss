@@ -1,0 +1,371 @@
+@import "./variables";
+@import "./resets";
+@import "./mixins";
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@function media($screen) {
+  @return map-get($screen-sizes, $screen);
+}
+
+// General
+.hero-section,
+.about-section,
+.models-section,
+.booking-section {
+  @include layout();
+}
+
+.about-section,
+.models-section,
+.booking-section {
+  background-color: #efefef;
+}
+
+.hidden {
+  display: none;
+}
+
+// Header and Hero
+
+.hero-section {
+  background-image: url("../../img/hero-img.png");
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%;
+
+  @media (max-width: media(mobile)) {
+    background-image: url("../../img/hero-img-mobile.png");
+    background-position: bottom;
+  }
+}
+
+.header-container {
+  margin-bottom: 9.6rem;
+  @media (max-width: media(tablet)) {
+    display: none;
+  }
+  .nav-items {
+    display: flex;
+    gap: 12.8rem;
+    list-style: none;
+    align-items: center;
+
+    .nav-item {
+      font-size: 2.8rem;
+      font-weight: weight(light);
+      letter-spacing: 1.2px;
+      @media (max-width: media(laptop)) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60vh;
+  @media (max-width: media(mobile)) {
+    align-items: flex-start;
+  }
+  .hero-content-container {
+    width: 100%;
+    @media (max-width: media(mobile)) {
+      text-align: center;
+    }
+  }
+  .heading-primary {
+    font-size: 9.8rem;
+    font-family: $cinzel-dec;
+    font-weight: weight(light);
+    margin-bottom: 1.8rem;
+    letter-spacing: -1.6px;
+    line-height: 1.25;
+    @media (max-width: media(laptop)) {
+      font-size: 6.4rem;
+    }
+    @media (max-width: media(mobile)) {
+      font-size: 4rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  .heading-slogan {
+    font-size: 4.8rem;
+    font-weight: weight(light);
+    line-height: 1.5;
+    margin-bottom: 4.4rem;
+    width: 50%;
+    @media (max-width: media(mobile)) {
+      font-size: 2rem;
+      margin: 0 auto;
+      width: 80%;
+    }
+    @media (max-width: media(laptop)) {
+      font-size: 3rem;
+    }
+  }
+
+  .flex-fill {
+    width: 100%;
+    @media (max-width: media(mobile)) {
+      display: none;
+    }
+    @media (max-width: media(laptop)) {
+      width: 50%;
+    }
+  }
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  @media (max-width: media(mobile)) {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .btn-secondary {
+    height: 60px;
+    width: 190px;
+    background: none;
+    color: $text-color;
+    font-family: $cormorant;
+    font-size: 2.4rem;
+    border: 2px solid $accent-color;
+    font-weight: weight(bold);
+    cursor: pointer;
+    @media (max-width: media(mobile)) {
+      height: 30px;
+      width: 95px;
+      font-size: 1.2rem;
+    }
+  }
+
+  .btn-primary {
+    @extend .btn-secondary;
+    background-color: $accent-color;
+  }
+}
+
+// About Us
+
+.about-section {
+  color: $dark-text-color;
+
+  .paragraph-reg {
+    max-width: 50%;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 3.2rem;
+    @media (max-width: media(mobile)) {
+      font-size: 1.2rem;
+      max-width: 70%;
+    }
+
+    @media (max-width: media(laptop)) {
+      font-size: 2.4rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.heading-secondary {
+  text-align: center;
+  font-size: 6.4rem;
+  margin-bottom: 4.4rem;
+  font-weight: weight(black);
+  @media (max-width: media(mobile)) {
+    font-size: 3.2rem;
+  }
+  @media (max-width: media(laptop)) {
+    font-size: 4rem;
+  }
+}
+
+.models-section {
+  text-align: center;
+  position: relative;
+}
+
+.carousel {
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 5rem;
+  width: 5rem;
+  background: none;
+  border: none;
+  border-radius: 100px;
+  &:hover {
+    color: $accent-color;
+  }
+  @media (max-width: media(mobile)) {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.slider-container {
+  display: flex;
+
+  width: 700%;
+  @media (max-width: media(mobile)) {
+    width: 750%;
+  }
+}
+
+.slide {
+  width: 100%;
+  cursor: pointer;
+}
+
+.slide-img {
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100);
+  transition: 1s ease-in-out;
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+.prev {
+  left: 30rem;
+  @media (max-width: media(mobile)) {
+    left: 3rem;
+  }
+  @media (max-width: media(laptop)) {
+    left: 15%;
+  }
+}
+
+.next {
+  right: 30rem;
+  @media (max-width: media(mobile)) {
+    right: 3rem;
+  }
+  @media (max-width: media(laptop)) {
+    right: 15%;
+  }
+}
+
+.booking-section {
+  color: $dark-text-color;
+}
+
+.booking-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-flex-1 {
+  width: 100%;
+}
+
+.booking-flex-2 {
+  width: 50%;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.booking-description {
+  max-width: 50%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 3.2rem;
+  @media (max-width: media(mobile)) {
+    font-size: 1.2rem;
+    max-width: 70%;
+  }
+  @media (max-width: media(laptop)) {
+    font-size: 2.4rem;
+  }
+}
+
+input {
+  color: $dark-text-color;
+  border: none;
+  background: none;
+  font-family: $cinzel;
+  font-size: 3rem;
+  outline: none;
+  border-bottom: 3px solid $accent-color;
+  font-weight: 600;
+  @media (max-width: media(mobile)) {
+    font-size: 1.5rem;
+    border-bottom: 1.5px solid $accent-color;
+    outline: none;
+  }
+  @media (max-width: media(laptop)) {
+    font-size: 2.4rem;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea {
+  font-family: $cormorant;
+  font-size: 3rem;
+  padding: 2%;
+  font-weight: 400;
+  resize: none;
+  @media (max-width: media(mobile)) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: media(laptop)) {
+    font-size: 2.4rem;
+  }
+}
+
+input::placeholder {
+  color: $dark-text-color;
+  opacity: 50%;
+}
+
+textarea::placeholder {
+  color: $dark-text-color;
+  opacity: 1;
+}
+
+.form-btn-container {
+  width: 100%;
+}
+
+.form-btn {
+  height: 60px;
+  width: 100%;
+  background: $accent-color;
+  color: $text-color;
+  font-family: $cormorant;
+  font-size: 2.4rem;
+  border: none;
+  font-weight: weight(bold);
+  cursor: pointer;
+  @media (max-width: media(mobile)) {
+    font-size: 2rem;
+    height: 40px;
+  }
+}

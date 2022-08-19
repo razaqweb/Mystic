@@ -1,0 +1,32 @@
+// Fonts
+$cinzel: "Cinzel", serif;
+$cinzel-dec: "Cinzel Decorative", cursive;
+$cormorant: "Cormorant", serif;
+
+$font-weights: (
+  "light": 300,
+  "regular": 400,
+  "semiBold": 500,
+  "bold": 600,
+  "black": 600,
+);
+
+@function weight($weight) {
+  @return map-get($font-weights, $weight);
+}
+
+// Colors
+$primary-color: #212529;
+$accent-color: #8d1d1d;
+$text-color: #efefef;
+$dark-text-color: #121212;
+
+//Screen Sizes
+
+$screen-sizes: (
+  "mobile": 480px,
+  "tablet": 768px,
+  "small-laptop": 1024px,
+  "laptop": 1366px,
+  "desktop": 1920px,
+);

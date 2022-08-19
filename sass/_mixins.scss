@@ -1,0 +1,8 @@
+@import "./variables";
+
+@mixin layout {
+  padding: 6.4rem 9.6rem;
+  @media (max-width: media(mobile)) {
+    padding: 4.8rem;
+  }
+}
