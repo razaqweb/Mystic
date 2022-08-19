@@ -444,7 +444,7 @@ textarea::placeholder {
 }
 
 .slide-img {
-  width: 100%;
+  max-width: 100%;
   filter: grayscale(100);
   transition: 0.5s ease-in-out;
 }
