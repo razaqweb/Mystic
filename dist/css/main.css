@@ -208,8 +208,8 @@ a {
 }
 @media (max-width: 480px) {
   .about-section .paragraph-reg {
-    font-size: 1.2rem;
-    max-width: 70%;
+    font-size: 1.6rem;
+    max-width: 100%;
   }
 }
 
@@ -306,8 +306,8 @@ a {
 }
 @media (max-width: 480px) {
   .booking-description {
-    font-size: 1.2rem;
-    max-width: 70%;
+    font-size: 1.6rem;
+    max-width: 100%;
   }
 }
 
@@ -412,7 +412,7 @@ textarea::placeholder {
   height: 500px;
   place-items: center;
   display: grid;
-  width: 90%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
 }
