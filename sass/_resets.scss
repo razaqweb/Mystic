@@ -19,6 +19,8 @@ body {
   color: $text-color;
   position: relative;
   height: 100%;
+  width: 100%;
+  background-color: $dark-text-color;
 }
 
 a {
@@ -26,7 +28,44 @@ a {
   color: $text-color;
 }
 
-strong {
+.bolded-li {
   font-weight: 400;
   font-family: $cormorant;
+}
+
+.loader {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: rotate(45deg);
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%), rotate(45deg);
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  margin: auto;
+  background: #222;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  inset: -15px;
+  margin: auto;
+  background: #c92a2a;
+  animation: diamondLoader 2s linear infinite;
+}
+@keyframes diamondLoader {
+  0%,
+  10% {
+    transform: translate(-64px, -64px) rotate(-45deg);
+  }
+  90%,
+  100% {
+    transform: translate(0px, 0px) rotate(-45deg);
+  }
 }

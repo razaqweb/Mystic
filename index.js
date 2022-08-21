@@ -3,6 +3,17 @@ const navLink = document.querySelector(".nav-link");
 const navBar = document.querySelector(".nav-items");
 const modelBtn = document.querySelector(".model-button");
 const bookingBtn = document.querySelector(".booking-button");
+const sections = document.querySelectorAll("section");
+const loader = document.querySelector(".loader");
+
+console.log(sections);
+// Loading
+window.addEventListener("load", () => {
+  loader.classList.add("hidden");
+  sections.forEach((section) => {
+    section.classList.remove("hidden");
+  });
+});
 
 // Smooth Navigation
 

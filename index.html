@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mystic</title>
+    <title>Mystic - Premium Modeling Agency</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="./dist/css/main.css" />
     <!-- Google Fonts (Cinzel + Cinzel Decorative + Cormorant) -->
@@ -17,8 +19,10 @@
   </head>
   <script defer src="index.js"></script>
   <body>
+    <!-- Loader -->
+    <span class="loader"></span>
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section hidden">
       <!-- Navigation -->
       <header class="header-container">
         <nav class="navigation">
@@ -30,10 +34,8 @@
             <li class="nav-item">
               <a href="#models" class="nav-link">Models</a>
             </li>
-            <li class="nav-item">
-              <a href="#booking" class="nav-link"
-                ><strong> BOOK NOW </strong>
-              </a>
+            <li class="nav-item bolded-li">
+              <a href="#booking" class="nav-link"> BOOK NOW </a>
             </li>
           </ul>
         </nav>
@@ -60,7 +62,7 @@
       </div>
     </section>
     <!-- About Section -->
-    <section class="about-section" id="about">
+    <section class="about-section hidden" id="about">
       <div class="about-container">
         <h1 class="heading-secondary">About Us</h1>
         <p class="paragraph-reg">
@@ -82,7 +84,7 @@
       </div>
     </section>
     <!-- Models Section -->
-    <section class="models-section" id="models">
+    <section class="models-section hidden" id="models">
       <div class="carousel">
         <div class="slider-container">
           <div class="slide">
@@ -193,7 +195,7 @@
       </button> -->
       <!-- <div class="model-profiles hidden">Model Profile</div> -->
     </section>
-    <section class="booking-section" id="booking">
+    <section class="booking-section hidden" id="booking">
       <div class="booking-flex">
         <!-- Flex Item 1 -->
         <div class="booking-flex-1">
