@@ -299,6 +299,11 @@ a {
     font-weight: 400;
   }
 }
+@media (max-width: 800px) {
+  .about-section .paragraph-reg {
+    max-width: 100%;
+  }
+}
 @media (max-width: 480px) {
   .about-section .paragraph-reg {
     font-size: 1.6rem;
@@ -448,6 +453,11 @@ a {
 @media (max-width: 1366px) {
   .booking-description {
     font-size: 2.4rem;
+  }
+}
+@media (max-width: 800px) {
+  .booking-description {
+    max-width: 100%;
   }
 }
 @media (max-width: 480px) {
