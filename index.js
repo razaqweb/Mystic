@@ -1,71 +1,24 @@
-const carousel = document.querySelector(".carousel");
-const slider = document.querySelector(".slider-container");
-const btnLeft = document.querySelector(".prev");
-const btnRight = document.querySelector(".next");
-const profile = document.querySelector(".model-profiles");
-const body = document.querySelector("body");
-const interval = 3000;
+const navItem = document.querySelectorAll(".nav-item");
+const navLink = document.querySelector(".nav-link");
+const navBar = document.querySelector(".nav-items");
+const modelBtn = document.querySelector(".model-button");
+const bookingBtn = document.querySelector(".booking-button");
 
-// let slides = document.querySelectorAll(".slide");
-// let index = 1;
+// Smooth Navigation
 
-// const firstClone = slides[0].cloneNode(true);
-// const lastClone = slides[slides.length - 1].cloneNode(true);
+const smoothScroll = (e) => {
+  e.preventDefault();
+  const id = e.target.getAttribute("href");
+  document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+};
 
-// firstClone.id = "first-clone";
-// lastClone.id = "last-clone";
+const smoothScrollNav = (e) => {
+  e.preventDefault();
+  const id = e.target.getAttribute("href");
+  if (!e.target.classList.contains("nav-link")) return;
+  document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+};
 
-// slider.append(firstClone);
-// slider.prepend(lastClone);
-
-// const nextSlide = () => {
-//   index++;
-//   slider.style.transform = `translateX(${-slideWidth * index}px)`;
-// };
-
-// const prevSlide = () => {
-//   index--;
-//   slider.style.transform = `translateX(${-slideWidth * index}px)`;
-// };
-// const slideWidth = slides[index].clientWidth;
-
-// slider.style.transform = `translateX(${-slideWidth * index}px)`;
-
-// // const startSlide = () => {
-// //   slides = document.querySelectorAll(".slide");
-// //   setInterval(() => {
-// //     index++;
-// //     slider.style.transform = `translateX(${-index}px)`;
-// //     slider.style.transition = ".5s";
-// //   }, 0);
-// // };
-
-// slider.addEventListener("transitionend", () => {
-//   slides = document.querySelectorAll(".slide");
-//   if (slides[index].id === firstClone.id) {
-//     slider.style.transition = "none";
-//     index = 1;
-//     slider.style.transform = `translateX(${-slideWidth * index}px)`;
-//   }
-//   if (slides[index].id === lastClone.id) {
-//     slider.style.transition = "none";
-//     index = slides.length - 2;
-//     slider.style.transform = `translateX(${-slideWidth * index}px)`;
-//   }
-// });
-
-// btnRight.addEventListener("click", () => {
-//   slides = document.querySelectorAll(".slide");
-//   if (index >= slides.length - 1) return;
-//   nextSlide();
-//   slider.style.transition = ".5s ease-in-out";
-// });
-
-// btnLeft.addEventListener("click", () => {
-//   slides = document.querySelectorAll(".slide");
-//   // if (index <= 0) return;
-//   prevSlide();
-//   slider.style.transition = ".5s ease-in-out";
-// });
-
-// startSlide();
+navBar.addEventListener("click", smoothScrollNav);
+modelBtn.addEventListener("click", smoothScroll);
+bookingBtn.addEventListener("click", smoothScroll);

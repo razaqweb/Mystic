@@ -58,7 +58,7 @@
       font-weight: weight(light);
       letter-spacing: 1.2px;
       @media (max-width: media(laptop)) {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
     }
   }
@@ -138,7 +138,7 @@
     font-family: $cormorant;
     font-size: 2.4rem;
     border: 2px solid $accent-color;
-    font-weight: weight(bold);
+    font-weight: 600;
     cursor: pointer;
     @media (max-width: media(mobile)) {
       height: 40px;
@@ -150,6 +150,7 @@
   .btn-primary {
     @extend .btn-secondary;
     background-color: $accent-color;
+    color: $text-color;
   }
 }
 
@@ -192,75 +193,89 @@
   position: relative;
 }
 
-// .carousel {
-//   width: 60%;
-//   margin: 0 auto;
-//   position: relative;
-//   overflow: hidden;
-// }
-
-// .carousel-button {
-//   cursor: pointer;
-//   position: absolute;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   height: 5rem;
-//   width: 5rem;
-//   background: none;
-//   border: none;
-//   border-radius: 100px;
-//   &:hover {
-//     color: $accent-color;
-//   }
-//   @media (max-width: media(mobile)) {
-//     height: 3rem;
-//     width: 3rem;
-//   }
-// }
-
-// .slider-container {
-//   display: flex;
-
-//   width: 700%;
-//   @media (max-width: media(mobile)) {
-//     width: 750%;
-//   }
-// }
-
-// .slide {
-//   width: 100%;
-//   cursor: pointer;
-// }
-
-// .slide-img {
-//   height: 100%;
-//   width: 100%;
-//   filter: grayscale(100);
-//   transition: 1s ease-in-out;
-//   &:hover {
-//     filter: grayscale(0);
-//   }
-// }
-
-.prev {
-  left: 30rem;
-  @media (max-width: media(laptop)) {
-    left: 15%;
-  }
+.carousel {
+  height: 500px;
+  place-items: center;
+  display: grid;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
   @media (max-width: media(mobile)) {
-    left: 3rem;
+    height: 250px;
   }
 }
 
-.next {
-  right: 30rem;
-  @media (max-width: media(laptop)) {
-    right: 15%;
+.slider-container {
+  width: calc(500px * 10);
+  display: flex;
+  animation: scroll 20s linear infinite;
+  &:hover {
+    animation-play-state: paused;
   }
   @media (max-width: media(mobile)) {
-    right: 3rem;
+    width: calc(250px * 10);
+    animation: scrollMobile 40s linear infinite;
   }
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-500px * 5));
+  }
+}
+
+@keyframes scrollMobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 5));
+  }
+}
+
+.slide {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: media(mobile)) {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+.slide-img {
+  max-width: 100%;
+  filter: grayscale(100);
+  transition: 0.5s ease-in-out;
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+// .prev {
+//   left: 30rem;
+//   @media (max-width: media(laptop)) {
+//     left: 15%;
+//   }
+//   @media (max-width: media(mobile)) {
+//     left: 3rem;
+//   }
+// }
+
+// .next {
+//   right: 30rem;
+//   @media (max-width: media(laptop)) {
+//     right: 15%;
+//   }
+//   @media (max-width: media(mobile)) {
+//     right: 3rem;
+//   }
+// }
 
 .booking-section {
   color: $dark-text-color;
@@ -369,65 +384,5 @@ textarea::placeholder {
   @media (max-width: media(mobile)) {
     font-size: 1.6rem;
     height: 50px;
-  }
-}
-
-.carousel {
-  height: 500px;
-  place-items: center;
-  display: grid;
-  width: 100%;
-  margin: auto;
-  overflow: hidden;
-  @media (max-width: media(mobile)) {
-    height: 250px;
-  }
-}
-
-.slider-container {
-  width: calc(500px * 10);
-  display: flex;
-  animation: scroll 40s linear infinite;
-  @media (max-width: media(mobile)) {
-    width: calc(250px * 10);
-    animation: scrollMobile 40s linear infinite;
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-500px * 5));
-  }
-}
-
-@keyframes scrollMobile {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 5));
-  }
-}
-
-.slide {
-  height: 500px;
-  width: 500px;
-  display: flex;
-  align-items: center;
-  @media (max-width: media(mobile)) {
-    height: 250px;
-    width: 250px;
-  }
-}
-
-.slide-img {
-  max-width: 100%;
-  filter: grayscale(100);
-  transition: 0.5s ease-in-out;
-  &:hover {
-    filter: grayscale(0);
   }
 }

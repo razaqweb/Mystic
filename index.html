@@ -18,28 +18,40 @@
   <script defer src="index.js"></script>
   <body>
     <!-- Hero Section -->
-    <section class="hero-section" id="hero">
+    <section class="hero-section">
       <!-- Navigation -->
       <header class="header-container">
         <nav class="navigation">
           <ul class="nav-items">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Models</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Book Now</a></li>
+            <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#models" class="nav-link">Models</a>
+            </li>
+            <li class="nav-item">
+              <a href="#booking" class="nav-link"
+                ><strong> BOOK NOW </strong>
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
       <!-- Hero Content -->
-      <div class="hero-container">
+      <div class="hero-container" id="hero">
         <div class="hero-flex">
           <!-- Flex Item 1 -->
           <div class="hero-content-container">
             <h1 class="heading-primary">Mystic</h1>
             <p class="heading-slogan">The World's Premium Modeling Agency.</p>
             <div class="btn-container">
-              <button class="btn-secondary">Models</button>
-              <button class="btn-primary">Book Now</button>
+              <button class="btn-secondary model-button" href="#models">
+                Models
+              </button>
+              <button class="btn-primary booking-button" href="#booking">
+                Book Now
+              </button>
             </div>
           </div>
           <!-- Flex Item 2 -->
