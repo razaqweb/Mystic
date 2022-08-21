@@ -60,6 +60,11 @@ strong {
   height: 100vh;
   max-width: 100%;
 }
+@media (max-width: 800px) {
+  .hero-section {
+    background-position: bottom;
+  }
+}
 @media (max-width: 480px) {
   .hero-section {
     background-image: url("../../img/hero-img-mobile.png");
@@ -70,14 +75,14 @@ strong {
 .header-container {
   margin-bottom: 9.6rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .header-container {
     display: none;
   }
 }
 .header-container .nav-items {
   display: flex;
-  gap: 12.8rem;
+  gap: 8rem;
   list-style: none;
   align-items: center;
 }
@@ -106,6 +111,12 @@ strong {
 .hero-flex .hero-content-container {
   width: 100%;
 }
+@media (max-width: 800px) {
+  .hero-flex .hero-content-container {
+    max-width: 100%;
+    align-self: center;
+  }
+}
 @media (max-width: 480px) {
   .hero-flex .hero-content-container {
     text-align: center;
@@ -124,6 +135,11 @@ strong {
     font-size: 5rem;
   }
 }
+@media (max-width: 800px) {
+  .hero-flex .heading-primary {
+    font-size: 4rem;
+  }
+}
 @media (max-width: 480px) {
   .hero-flex .heading-primary {
     font-size: 3.4rem;
@@ -135,11 +151,18 @@ strong {
   font-weight: 300;
   line-height: 1.5;
   margin-bottom: 4.4rem;
-  width: 50%;
+  max-width: 50%;
 }
 @media (max-width: 1366px) {
   .hero-flex .heading-slogan {
     font-size: 3rem;
+  }
+}
+@media (max-width: 800px) {
+  .hero-flex .heading-slogan {
+    font-size: 2.5rem;
+    margin-bottom: 2.2rem;
+    max-width: 70%;
   }
 }
 @media (max-width: 480px) {
@@ -168,6 +191,13 @@ strong {
   align-items: center;
   gap: 3.2rem;
 }
+@media (max-width: 1024px) {
+  .btn-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6;
+  }
+}
 @media (max-width: 480px) {
   .btn-container {
     justify-content: center;
@@ -184,6 +214,13 @@ strong {
   border: 2px solid #8d1d1d;
   font-weight: 600;
   cursor: pointer;
+}
+@media (max-width: 800px) {
+  .btn-container .btn-secondary, .btn-container .btn-primary {
+    height: 50px;
+    width: 50%;
+    font-size: 2rem;
+  }
 }
 @media (max-width: 480px) {
   .btn-container .btn-secondary, .btn-container .btn-primary {
