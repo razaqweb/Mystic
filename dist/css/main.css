@@ -116,7 +116,7 @@ a {
 }
 @media (max-width: 480px) {
   .hero-section {
-    background-image: url("../../img/hero-img-mobile.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgb(0, 0, 0)), url("../../img/hero-img-mobile.png");
     background-position: bottom;
   }
 }
@@ -152,11 +152,6 @@ a {
   justify-content: space-between;
   height: 60vh;
 }
-@media (max-width: 480px) {
-  .hero-flex {
-    align-items: flex-start;
-  }
-}
 .hero-flex .hero-content-container {
   width: 100%;
 }
@@ -169,6 +164,7 @@ a {
 @media (max-width: 480px) {
   .hero-flex .hero-content-container {
     text-align: center;
+    align-self: flex-start;
   }
 }
 .hero-flex .heading-primary {

@@ -40,7 +40,8 @@
     background-position: bottom;
   }
   @media (max-width: media(mobile)) {
-    background-image: url("../../img/hero-img-mobile.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgb(0, 0, 0)),
+      url("../../img/hero-img-mobile.png");
     background-position: bottom;
   }
 }
@@ -72,9 +73,6 @@
   align-items: center;
   justify-content: space-between;
   height: 60vh;
-  @media (max-width: media(mobile)) {
-    align-items: flex-start;
-  }
   .hero-content-container {
     width: 100%;
     @media (max-width: media(tablet)) {
@@ -83,6 +81,7 @@
     }
     @media (max-width: media(mobile)) {
       text-align: center;
+      align-self: flex-start;
     }
   }
   .heading-primary {
