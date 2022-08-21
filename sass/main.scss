@@ -28,6 +28,23 @@
   display: none;
 }
 
+@keyframes invis-to-vis {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
+
+@keyframes invisible {
+  100% {
+    opacity: 0;
+  }
+}
+
 // Header and Hero
 
 .hero-section {
@@ -40,7 +57,7 @@
     background-position: bottom;
   }
   @media (max-width: media(mobile)) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgb(0, 0, 0)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)),
       url("../../img/hero-img-mobile.png");
     background-position: bottom;
   }
@@ -321,7 +338,7 @@
 
 .booking-flex-2 {
   width: 50%;
-  @media (max-width: media(mobile)) {
+  @media (max-width: media(tablet)) {
     width: 100%;
   }
 }

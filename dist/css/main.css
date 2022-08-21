@@ -103,6 +103,37 @@ a {
   display: none;
 }
 
+@-webkit-keyframes invis-to-vis {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
+
+@keyframes invis-to-vis {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
+@-webkit-keyframes invisible {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes invisible {
+  100% {
+    opacity: 0;
+  }
+}
 .hero-section {
   background-image: url("../../img/hero-img.png");
   background-size: cover;
@@ -116,7 +147,7 @@ a {
 }
 @media (max-width: 480px) {
   .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgb(0, 0, 0)), url("../../img/hero-img-mobile.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url("../../img/hero-img-mobile.png");
     background-position: bottom;
   }
 }
@@ -428,7 +459,7 @@ a {
 .booking-flex-2 {
   width: 50%;
 }
-@media (max-width: 480px) {
+@media (max-width: 800px) {
   .booking-flex-2 {
     width: 100%;
   }
